@@ -60,4 +60,4 @@ sim:
 	$(BUILD_DIR)/obj_dir/$(TB_BIN) $(SIM_ARGS)
 
 waves:
-	gtkwave dump.vcd
+	gtkwave $(SIM_DIR)/dump.vcd

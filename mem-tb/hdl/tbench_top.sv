@@ -29,7 +29,7 @@ module tbench_top;
   //---------------------------------------
   initial begin
     reset = 1;
-    #5 reset = 0;
+    #5 reset =0;
   end
 
   //---------------------------------------
@@ -40,26 +40,14 @@ module tbench_top;
   //---------------------------------------
   //DUT instance
   //---------------------------------------
-  logic [15:0] addr;
-  logic                  wr_en;
-  logic                  rd_en;
-  logic [31:0] wdata;
-  logic [31:0] rdata;
-
-  assign addr = intf.addr;
-  assign wr_en = intf.wr_en;
-  assign rd_en = intf.rd_en;
-  assign wdata = intf.wdata;
-  assign intf.rdata = rdata;
-
   memory DUT (
-    .clk(clk),
-    .reset(reset),
-    .addr(addr),
-    .wr_en(wr_en),
-    .rd_en(rd_en),
-    .wdata(wdata),
-    .rdata(rdata)
+    .clk(intf.clk),
+    .reset(intf.reset),
+    .addr(intf.addr),
+    .wr_en(intf.wr_en),
+    .rd_en(intf.rd_en),
+    .wdata(intf.wdata),
+    .rdata(intf.rdata)
    );
 
   //---------------------------------------
