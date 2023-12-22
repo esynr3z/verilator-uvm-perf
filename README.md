@@ -1,5 +1,7 @@
 # Verilator UVM performance testbench
 
+Experimental repo to compare Verilator performance in UVM simulation.
+
 ## Logbook
 
 - Start from this repo
