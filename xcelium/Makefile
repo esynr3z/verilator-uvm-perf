@@ -16,14 +16,14 @@ TB_TOP := tbench_top
 
 BUILD_ARGS = \
 	-64bit\
-    -elaborate \
-    -l build.log \
-    -sv \
-    -uvmhome CDNS-1.2 \
-    -disable_sem2009 \
-    +timescale=1ns/1ps \
-    -nospecify \
-    -notimingcheck \
+	-elaborate \
+	-l build.log \
+	-sv \
+	-uvmhome CDNS-1.2 \
+	-disable_sem2009 \
+	+timescale=1ns/1ps \
+	-nospecify \
+	-notimingcheck \
 	+incdir+${TB_ROOT}/hdl \
 	${TB_ROOT}/hdl/tbench_top.sv ${TB_ROOT}/hdl/design.sv
 

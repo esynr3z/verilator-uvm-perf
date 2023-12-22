@@ -19,7 +19,7 @@ TB_BIN := tbench_top
 
 # Verilator build options
 BUILD_ARGS = \
-    -DUVM_NO_DPI \
+	-DUVM_NO_DPI \
 	-fno-gate \
 	--timescale 1ns/1ps \
 	--error-limit 100 \
